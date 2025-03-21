@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/icon-AbtMeDC2.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="login.js" defer></script>
+    <script type="script" src="script.js"></script>
+    <title>Login</title>
+</head>
+</div>
+<body>
+    <div class="gradient-container">
+        <div class="content">
+            <div class="card-centro">
+                <a href="./index.html">
+                    <img src="./assets/icon-AbtMeDC2.png" alt="Home" class="logo">
+                </a>
+                <br>
+                <div class="input-container">
+                  <input placeholder="Email" type="text" id="email" class="password-input">
+              </div>
+              <br>
+              <div class="input-container">
+                  <input placeholder="Password" type="password" id="password" class="password-input">
+                  <img src="./assets/eye-close.png" id="togglePassword" class="toggle-password" width="15" alt="Toggle Password">
+              </div>
+              <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                      const passwordInput = document.getElementById('password');
+                      const togglePassword = document.getElementById('togglePassword');
+              
+                      if (passwordInput && togglePassword) {
+                          togglePassword.addEventListener('click', function () {
+                              const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                              passwordInput.setAttribute('type', type);
+                              this.src = type === 'password' ? './assets/eye-close.png' : './assets/eye-open.png';
+                          });
+                      } else {
+                          console.error("Password or toggle elements not found.");
+                      }
+                  });
+              </script>
+                  <br>
+                    <button class="logar" id="btn-login">Logar</button>
+                  <br>
+                  <br>                  
+                  <br>
+                  <span class="n-tem-conta">Novo aqui? <a href="cadastro.html">cadastre-se!</a></span>
+
+            </div>
+            <p class="copyright-login"> 2025 © AboutMeDotCom </p>
+        </div>
+        <div class="corner-image">
+            
+        </div>
+</body>
+</html>
